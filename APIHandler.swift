@@ -4,12 +4,26 @@
 //
 //  Created by chaitanya on 17/09/22.
 //
+// array inside Objects unte e format lo rastam
+// array inside multiple objects unte post api method lo unnattu ga rastam
+
+
 
 import UIKit
 import Alamofire
 
 
 class APIHandler:NSObject {
+    
+    
+// [ {
+//    "userId": 1,
+//    "id": 1,
+//   "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+//    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    "Data":{4 values}
+//  }]
+
     
     func apiPostCall( handler: @escaping (_ result: NSDictionary) -> (Void) ) {
     let url = "https://trains.p.rapidapi.com/"
@@ -52,7 +66,15 @@ class APIHandler:NSObject {
     
     }
     
+    // MARK: - JSON Model
     
+// [ {
+//    "userId": 1,
+//    "id": 1,
+//   "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+//    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+//  }]
+
     func getAPICall( handler: @escaping (_ title:String, _ body:String) -> (Void)) {
         
         let url = "https://jsonplaceholder.typicode.com/posts/"
